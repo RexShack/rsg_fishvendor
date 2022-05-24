@@ -15,8 +15,4 @@ server_script {
 	'server/server.lua',
 }
 
-dependency {
-	'zf_context',
-}
-
 lua54 'yes'
