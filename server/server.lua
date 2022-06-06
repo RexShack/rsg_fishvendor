@@ -25,10 +25,10 @@ AddEventHandler('rsg_fishvendor:server:sellsmallfish', function()
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["smallfish"], "remove")
 			Player.Functions.AddItem('fishmeat', 1)
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["fishmeat"], "add")
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you have sold your fish for $'..price, 5000)
+			TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Sold', 5000, 'you have sold your fish for $'..price, 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 			hassmallfish = false
 		else
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you don\'t have any fish to sell!', 5000)
+			TriggerClientEvent('QBCore:Notify', src, 9, 'you don\'t have any fish to sell!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 		end
 	end
 end)
@@ -55,10 +55,10 @@ AddEventHandler('rsg_fishvendor:server:sellmediumfish', function()
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["mediumfish"], "remove")
 			Player.Functions.AddItem('fishmeat', 2)
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["fishmeat"], "add")
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you have sold your fish for $'..price, 5000)
+			TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Sold', 5000, 'you have sold your fish for $'..price, 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 			hasmediumfish = false
 		else
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you don\'t have any fish to sell!', 5000)
+			TriggerClientEvent('QBCore:Notify', src, 9, 'you don\'t have any fish to sell!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 		end
 	end
 end)
@@ -85,10 +85,10 @@ AddEventHandler('rsg_fishvendor:server:selllargefish', function()
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["largefish"], "remove")
 			Player.Functions.AddItem('fishmeat', 3)
 			TriggerClientEvent('inventory:client:ItemBox', src, sharedItems["fishmeat"], "add")
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you have sold your fish for $'..price, 5000)
+			TriggerClientEvent('QBCore:Notify', src, 8, 'Fish Sold', 5000, 'you have sold your fish for $'..price, 'inventory_items_mp', 'generic_bundle_fishing', 'COLOR_WHITE')
 			haslargefish = false
 		else
-			TriggerClientEvent('rsg_notify:client:notifiy', src, 'you don\'t have any fish to sell!', 5000)
+			TriggerClientEvent('QBCore:Notify', src, 9, 'you don\'t have any fish to sell!', 5000, 0, 'mp_lobby_textures', 'cross', 'COLOR_WHITE')
 		end
 	end
 end)
